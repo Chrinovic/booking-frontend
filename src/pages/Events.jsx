@@ -90,7 +90,7 @@ export default function Events() {
 
               {event.availableSeats > 0 ? (
                 <button
-                  onClick={() => navigate(`/buy-ticket/${event.id}`)}
+                  onClick={() => navigate(`/buy-ticket/${event._id}`)}
                   className="mt-4 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition"
                 >
                   Buy Ticket

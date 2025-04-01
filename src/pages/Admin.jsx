@@ -42,12 +42,12 @@ export default function AdminPanel() {
 
   const deleteEvent = async (id) => {
     await axios.delete(`http://localhost:5000/api/events/${id}`);
-    setEvents(events.filter((event) => event.id !== id));
+    setEvents(events.filter((event) => event._id !== id));
   };
 
   const deleteUser = async (id) => {
     await axios.delete(`http://localhost:5000/api/users/${id}`);
-    setUsers(users.filter((user) => user.id !== id));
+    setUsers(users.filter((user) => user._id !== id));
   };
 
   if (loading) return <p>Loading...</p>;
@@ -59,18 +59,18 @@ export default function AdminPanel() {
       {/* Manage Events */}
       <h2 className="text-2xl mt-4">Events</h2>
       {events.map((event) => (
-        <div key={event.id} className="border p-4 mt-2 flex justify-between">
+        <div key={event._id} className="border p-4 mt-2 flex justify-between">
           <span>{event.name} - {event.date}</span>
-          <button onClick={() => deleteEvent(event.id)} className="bg-red-500 text-white p-2">Delete</button>
+          <button onClick={() => deleteEvent(event._id)} className="bg-red-500 text-white p-2">Delete</button>
         </div>
       ))}
 
       {/* Manage Users */}
       <h2 className="text-2xl mt-6">Users</h2>
       {users.map((user) => (
-        <div key={user.id} className="border p-4 mt-2 flex justify-between">
+        <div key={user._id} className="border p-4 mt-2 flex justify-between">
           <span>{user.email} - {user.role}</span>
-          <button onClick={() => deleteUser(user.id)} className="bg-red-500 text-white p-2">Delete</button>
+          <button onClick={() => deleteUser(user._id)} className="bg-red-500 text-white p-2">Delete</button>
         </div>
       ))}
     </div>
