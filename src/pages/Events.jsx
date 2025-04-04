@@ -19,7 +19,6 @@ export default function Events() {
       .catch((error) => console.error("Error fetching events:", error));
   }, []);
 
-  // Filter & sort events whenever search/location/sortBy changes
   useEffect(() => {
     let filtered = events.filter(event =>
       event.name.toLowerCase().includes(search.toLowerCase()) &&
@@ -39,7 +38,6 @@ export default function Events() {
     <div className="p-6 max-w-5xl mx-auto">
       <h1 className="text-4xl font-bold text-center mb-6">Upcoming Events</h1>
 
-      {/* 🔍 Filters & Sorting */}
       <div className="flex flex-wrap gap-4 mb-6 justify-center">
         <input
           type="text"
@@ -67,7 +65,6 @@ export default function Events() {
         </select>
       </div>
 
-      {/* 🎟️ Event Listings */}
       {filteredEvents.length === 0 ? (
         <p className="text-center text-gray-500">No events found.</p>
       ) : (
@@ -85,7 +82,7 @@ export default function Events() {
                 <p className={`text-sm ${event.availableSeats > 0 ? "text-green-500" : "text-red-500"}`}>
                   Available Seats: {event.availableSeats}
                 </p>
-                <p className="text-lg font-bold text-gray-800 mt-2">💰 ${event.price}</p>
+                <p className="text-lg font-bold text-gray-800 mt-2">💰 €{event.price}</p>
               </div>
 
               {event.availableSeats > 0 ? (
