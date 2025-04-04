@@ -1,12 +1,62 @@
-# React + Vite
+# 🎟️ Events Booking
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ 
 
-Currently, two official plugins are available:
+Welcome to the **Events Booking** – a modern React-based interface for users to browse events, buy tickets, and for admins to manage users, events, and purchases.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> 🔗 This app is designed to work with the [Events Booking Backend](https://github.com/MaximeNGY/4WEBD).
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Features
+
+- 🔐 Authentication (Login, Register, JWT-based)
+- 🎫 Buy tickets for events
+- 📅 Dashboard with upcoming & past tickets
+- ⚙️ Admin panel for managing:
+  - Events
+  - Users
+  - Purchase History
+- 🧠 Role-based access control
+- 🧼 Fully styled with Tailwind CSS
+
+---
+
+## 📦 Tech Stack
+
+- **Frontend**: React (Vite)
+- **Routing**: React Router
+- **HTTP**: Axios
+- **State**: Context API
+- **Styling**: Tailwind CSS
+- **Auth**: JWT via `localStorage`
+---
+
+## 📁 Project Structure
+
+```markdown
+client/
+├── public/               # Static assets (e.g., index.html)
+├── src/
+│   ├── components/       # Shared UI components (e.g., Navbar)
+│   ├── context/          # Auth context for managing user state
+│   ├── pages/            # Page components (Home, Login, Admin, etc.)
+│   └── App.jsx           # Main routing and layout
+└── package.json          # Project metadata and dependencies
+```
+
+---
+
+## 🛠️ Setup (Development)
+
+Make sure you have **Node.js (v18+)** and **npm** installed.
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+The app will be running at the default Vite development server URL:
+http://localhost:5173

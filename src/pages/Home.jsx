@@ -11,7 +11,7 @@ export default function Home() {
       {/* Overlay Content */}
       <div className="relative z-10 p-6">
         <h1 className="text-5xl font-extrabold drop-shadow-md">
-          Welcome to <span className="text-blue-400">Concert Ticketing</span>
+          Welcome to <span className="text-blue-400">Events Booking</span>
         </h1>
         <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
           Book your favorite events and concerts hassle-free. Get your tickets now and experience unforgettable moments!
